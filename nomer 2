@@ -1,0 +1,12 @@
+def delit(n):
+    s = set()
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            s.add(i)
+            s.add(n//i)
+    return list(s)
+for i in range(101000000, 102000000 + 1):
+    if int(i ** 0.5) == (i ** 0.5):
+        a = delit(i)
+        if len(a) == 1:
+            print(i, *a)

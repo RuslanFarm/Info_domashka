@@ -1,0 +1,14 @@
+f = open('28128_B.txt').readlines()
+print(f)
+a = []
+big = []
+for line in f[1:]:
+    a.append(int(line.split()[0]))
+for i in range(int(f[0])):
+    for j in range(int(f[0])):
+        if (a[i] + a[j]) % 3 == 0:
+            big.append(a[i] + a[j])
+if len(big) == 0:
+    print(1)
+print(max(big))
+# 19998
